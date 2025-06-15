@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Add Bill{% endblock %}
+{% block content %}
+<h1 class="text-xl font-bold mb-4">Add New Bill</h1>
+<form method="POST" class="max-w-md bg-white p-6 rounded shadow">
+    <label class="block mb-2 font-semibold">Date</label>
+    <input type="date" name="date" required class="w-full border p-2 mb-4 rounded">
+
+    <label class="block mb-2 font-semibold">Category</label>
+    <input type="text" name="category" required placeholder="Electricity, Travel..." class="w-full border p-2 mb-4 rounded">
+
+    <label class="block mb-2 font-semibold">Amount (₹)</label>
+    <input type="number" name="amount" required step="0.01" class="w-full border p-2 mb-4 rounded">
+
+    <label class="block mb-2 font-semibold">Description</label>
+    <textarea name="description" rows="3" class="w-full border p-2 mb-4 rounded"></textarea>
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Add Bill</button>
+</form>
+{% endblock %}
